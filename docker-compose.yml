@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    container_name: phpwomenbr_site
+    hostname: phpwomen.dev
+    command: jekyll serve
+    image: jekyll/jekyll:latest
+    volumes:
+      - $PWD:/srv/jekyll
+    ports:
+      - 4000:4000
